@@ -16,7 +16,7 @@
 
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
 
-                    <a href="{{ route('index') }}">
+                    <a href="{{ route('projects') }}">
                         <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Guarda qualche mio
                             lavoro</button>
                     </a>

@@ -11,6 +11,11 @@ class PageController extends Controller
         return view('index');
     }
 
+    public function about_me()
+    {
+        return view('index');
+    }
+
     public function projects()
     {
         return view('projects');

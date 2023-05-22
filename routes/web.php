@@ -21,6 +21,7 @@ use App\Http\Controllers\FallbackController;
 Route::prefix( '/' )->group( function () {
     Route::get('/', [PageController::class, 'index'])->name('index');
     Route::get('/projects', [PageController::class, 'projects'])->name('projects');
+    Route::get('/about_me', [PageController::class, 'about_me'])->name('about_me');
 });
 
 Route::fallback( FallbackController::class );

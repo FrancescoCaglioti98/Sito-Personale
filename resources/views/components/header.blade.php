@@ -1,43 +1,34 @@
-<header class="py-3 mb-3 border-bottom">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
 
-    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+    <div class="container-fluid">
 
-        <div class="dropdown">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-house"></i>
+        </a>
 
-            <a href="#"
-                class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-house" style="font-size:1.5rem;"></i>
-            </a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <ul class="dropdown-menu text-small shadow">
-                <li><a class="dropdown-item active" href="#" aria-current="page">Home</a></li>
-                <li><a class="dropdown-item" href="#">What i can do</a></li>
-                <li><a class="dropdown-item" href="#">My Work</a></li>
-                <li><a class="dropdown-item" href="#">Contact Info</a></li>
+        <div class="navbar-collapse collapse" id="side_menu">
+            <ul class="ms-auto navbar-nav">
+                
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is( 'index' ) ? 'disabled' : 'active' }}" href="{{ route('index') }}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is( 'projects' ) ? 'disabled' : 'active' }}" href="{{ route('projects') }}">Progetti</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is( 'about_me' ) ? 'disabled' : 'active' }}" href="{{ route('about_me') }}">About Me</a>
+                </li>
+
             </ul>
-
-        </div>
-
-        <div class="d-flex align-items-center">
-            
-            <div class="flex-shrink-0 dropdown">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
-                        class="rounded-circle">
-                </a>
-                <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                </ul>
-            </div>
             
         </div>
     </div>
-</header>
+</nav>
